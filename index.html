@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ImobPilot CRM</title>
+    <meta name="description" content="Premium Real Estate CRM" />
+    
+    <!-- PWA meta tags -->
+    <meta name="theme-color" content="#111827" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#111827", // Gray-900 (Modern Charcoal Black)
+              "primary-light": "#374151", // Gray-700
+              accent: "#4f46e5", // Indigo-600 (Modern Tech Blue/Purple)
+              "accent-light": "#818cf8", // Indigo-400
+              "bg-light": "#f3f4f6", // Gray-100 (Cooler white)
+              "bg-dark": "#030712",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Inter", "sans-serif"], // Force sans-serif even if serif class is used accidentally
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -5px rgba(0,0,0,0.05)',
+              'float': '0 10px 30px -10px rgba(17, 24, 39, 0.15)',
+              'glow': '0 0 20px -5px rgba(79, 70, 229, 0.4)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6;
+        overscroll-behavior-y: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .safe-top {
+        padding-top: env(safe-area-inset-top);
+      }
+      
+      /* Animation for cleaner interactions */
+      .tap-highlight-transparent {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
